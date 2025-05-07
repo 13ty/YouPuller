@@ -1,0 +1,4 @@
+pytube
+yt-dlp
+ffmpeg-python
+Flask

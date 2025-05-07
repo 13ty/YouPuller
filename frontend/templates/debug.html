@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>YouPuller - Debug Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        button {
+            background-color: #cc0000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            margin: 5px 0;
+        }
+        button:hover {
+            background-color: #a30000;
+        }
+        #output {
+            margin-top: 20px;
+            white-space: pre-wrap;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            height: 200px;
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+<body>
+    <h1>Debug Menu</h1>
+    <button onclick="runTest('download')">Test pobierania</button><br>
+    <button onclick="runTest('convert')">Test konwersji</button><br>
+    <button onclick="runTest('subtitles')">Test pobierania napisów</button><br>
+    <div id="output"></div>
+
+    <script>
+        async function runTest(testName) {
+            const output = document.getElementById('output');
+            output.textContent = 'Uruchamianie testu: ' + testName + '...';
+            try {
+                const response = await fetch('/debug/run_test/' + testName);
+                const data = await response.json();
+                output.textContent = data.result;
+            } catch (error) {
+                output.textContent = 'Błąd podczas testu: ' + error;
+            }
+        }
+    </script>
+</body>
+</html>
