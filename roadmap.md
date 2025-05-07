@@ -2,7 +2,7 @@
 
 ## 1. Przygotowanie środowiska i konfiguracja projektu
 
-- [ ] Utworzenie repozytorium projektu
+- [x] Utworzenie repozytorium projektu
 - [ ] Konfiguracja środowiska Python (wirtualne środowisko, wymagane biblioteki)
 - [ ] Przygotowanie struktury katalogów (backend, frontend, gui)
 
@@ -30,11 +30,11 @@
 
 ## 7. Obsługa napisów do filmów
 
-- [ ] Pobieranie napisów w wybranym języku z serwisów (np. YouTube)
-- [ ] Tłumaczenie napisów, jeśli nie są dostępne w wybranym języku
-- [ ] Transkrypcja napisów za pomocą bibliotek Pythona, jeśli napisy nie są dostępne
-- [ ] Przygotowanie miejsca w GUI na wybór i obsługę napisów
-- [ ] Uwzględnienie funkcjonalności napisów przy wyborze bibliotek backendowych
+- [x] Pobieranie napisów w wybranym języku z serwisów (np. YouTube)
+- [x] Tłumaczenie napisów, jeśli nie są dostępne w wybranym języku
+- [x] Transkrypcja napisów za pomocą bibliotek Pythona, jeśli napisy nie są dostępne
+- [x] Przygotowanie miejsca w GUI na wybór i obsługę napisów
+- [x] Uwzględnienie funkcjonalności napisów przy wyborze bibliotek backendowych
 
 ## 4. Integracja
 
@@ -43,9 +43,9 @@
 
 ## 5. Testowanie i optymalizacja
 
-- [ ] Testy funkcjonalne i integracyjne
+- [x] Testy funkcjonalne i integracyjne
 - [ ] Optymalizacja wydajności i obsługi błędów
-- [ ] Dokumentacja użytkownika i dewelopera
+- [x] Dokumentacja użytkownika i dewelopera
 
 ## 6. Dodatkowe funkcje (opcjonalne)
 
@@ -53,14 +53,6 @@
 - [ ] Harmonogram pobierania
 - [ ] Obsługa dodatkowych serwisów
 - [ ] Integracja z bazą danych do zarządzania plikami
-
-## 7. Obsługa napisów do filmów
-
-- [ ] Pobieranie napisów w wybranym języku z serwisów (np. YouTube)
-- [ ] Tłumaczenie napisów, jeśli nie są dostępne w wybranym języku
-- [ ] Transkrypcja napisów za pomocą bibliotek Pythona, jeśli napisy nie są dostępne
-- [ ] Przygotowanie miejsca w GUI na wybór i obsługę napisów
-- [ ] Uwzględnienie funkcjonalności napisów przy wyborze bibliotek backendowych
 
 ---
 

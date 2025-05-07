@@ -1,4 +1,4 @@
-S## @@ Backend Main Module
+Sko## @@ Backend Main Module
 
 from downloader import download_video
 from converter import convert_media
@@ -30,6 +30,24 @@ def process_media(url, download_path, output_format, quality, playlist=False, su
     if not downloaded_file:
         print("Pobieranie nie powiodło się.")
         return None
+
+    # Po pobraniu napisów można dodać tłumaczenie lub transkrypcję
+    if subtitles:
+        from backend.subtitles import translate_subtitles, transcribe_audio_to_subtitles
+        subtitle_file = os.path.splitext(downloaded_file)[0] + '.srt'
+        if os.path.exists(subtitle_file):
+            translated_subtitle = translate_subtitles(subtitle_file, subtitle_lang)
+            if translated_subtitle:
+                print(f"Napisy przetłumaczone na język: {subtitle_lang}")
+            else:
+                print("Tłumaczenie napisów nie powiodło się.")
+        else:
+            print("Plik napisów nie istnieje, próba transkrypcji.")
+            transcribed_subtitle = transcribe_audio_to_subtitles(downloaded_file, subtitle_file)
+            if transcribed_subtitle:
+                print("Transkrypcja napisów zakończona sukcesem.")
+            else:
+                print("Transkrypcja napisów nie powiodła się.")
 
     if output_format not in ['mp4', 'mkv', 'avi']:
         converted_file = convert_media(downloaded_file, download_path, output_format)
